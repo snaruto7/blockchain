@@ -5,7 +5,7 @@ const Blockchain = require('./blockchain');
 const bitcoin = new Blockchain();
 const uuid = require('uuid/v1');
 const nodeAddress = uuid().split('-').join('');
-const port = 3001 //process.argv[2];
+//const port = 3001 process.argv[2];
 const rp = require('request-promise');
 
 app.use(bodyParser.json());
@@ -259,6 +259,4 @@ app.get('/block-explorer', function(req,res){
 });
 
 
-app.listen(port ,function(){
-	console.log(`Listening to port number ${port}...`);
-});
+app.listen(process.env.PORT || 3001)

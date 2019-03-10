@@ -259,4 +259,4 @@ app.get('/block-explorer', function(req,res){
 });
 
 
-app.listen(process.env.PORT || 3001)
+app.listen(process.env.PORT || 3001);
